@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support — Pickler-002</title>
+<style>
+  :root { --fg:#1a1b2e; --muted:#5c6072; --line:#e6e8f0; --bg:#ffffff; --accent:#01c195; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Hiragino Sans","Noto Sans JP","Noto Sans KR","Noto Sans SC",sans-serif;
+         line-height:1.75; -webkit-text-size-adjust:100%; }
+  .wrap { max-width:760px; margin:0 auto; padding:32px 22px 80px; }
+  header.top { padding:18px 0 8px; border-bottom:1px solid var(--line); margin-bottom:8px; }
+  .brand { font-weight:800; font-size:20px; letter-spacing:.2px; }
+  nav.langs { display:flex; flex-wrap:wrap; gap:8px; margin:16px 0 8px; }
+  nav.langs a { font-size:13px; text-decoration:none; color:var(--muted);
+                border:1px solid var(--line); border-radius:999px; padding:6px 12px; cursor:pointer; }
+  nav.langs a:hover { color:var(--fg); border-color:var(--accent); }
+  nav.langs a.current { color:var(--fg); border-color:var(--accent); background:#f3fbf8; }
+  section.support { display:none; padding-top:12px; }
+  section.support.active { display:block; }
+  h1 { font-size:24px; margin:18px 0 4px; }
+  h2 { font-size:17px; margin:28px 0 6px; }
+  .q { font-weight:700; margin:18px 0 2px; }
+  p, li { color:var(--fg); font-size:15px; }
+  .muted { color:var(--muted); font-size:13px; }
+  .contact { margin-top:14px; padding:16px 18px; border:1px solid var(--line); border-radius:12px; background:#fafbfd; }
+  a.inline { color:var(--accent); word-break:break-all; }
+  footer { color:var(--muted); font-size:13px; padding-top:28px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">Pickler-002</div>
+    <nav class="langs">
+      <a href="#ja">日本語</a>
+      <a href="#en">English</a>
+      <a href="#vi">Tiếng Việt</a>
+      <a href="#ko">한국어</a>
+      <a href="#zh">简体中文</a>
+    </nav>
+  </header>
+
+  <!-- 日本語 -->
+  <section id="ja" class="support active">
+    <h1>サポート</h1>
+    <p>Pickler-002 をご利用いただきありがとうございます。よくある質問と、お問い合わせ先をご案内します。</p>
+
+    <h2>よくある質問</h2>
+    <div class="q">組み合わせはどうやって作りますか?</div>
+    <p>参加人数とコート数を設定し、シャッフルボタンを押すだけです。全コートの対戦カードが自動で作られます。</p>
+    <div class="q">途中で休憩・離脱したい人がいます。</div>
+    <p>プレイヤーの一覧から「休憩・離脱」を選べます。休憩は参加回数を保持したまま、次回優先で戻れます。離脱は一覧から外します。</p>
+    <div class="q">遅れて参加したり、人数が変わったときは?</div>
+    <p>いつでもプレイヤーを追加・変更できます。人数を変えると、組み合わせは自動で作り直されます。</p>
+    <div class="q">組み合わせはどう決まりますか?</div>
+    <p>参加回数の少ない人を優先して選びます。特定の人が出ずっぱり・休みっぱなしになりにくく、みんなが平等にプレイできます。</p>
+    <div class="q">データはどこに保存されますか?</div>
+    <p>すべて端末内にのみ保存されます。外部に送信されることはありません。アプリをアンインストールすると削除されます。</p>
+
+    <h2>お問い合わせ</h2>
+    <div class="contact">
+      <p>ご質問・ご要望・不具合の報告は、以下のいずれかまでご連絡ください。</p>
+      <p>X(旧Twitter)DM:<a class="inline" href="https://x.com/studiotoggle">https://x.com/studiotoggle</a></p>
+      <p>メール:<span class="email-link"></span></p>
+      <p class="muted">不具合の場合は、お使いの機種・iOS のバージョン・状況を教えていただけると助かります。</p>
+    </div>
+    <footer>© 2026 ToggleStudio</footer>
+  </section>
+
+  <!-- English -->
+  <section id="en" class="support">
+    <h1>Support</h1>
+    <p>Thank you for using Pickler-002. Below are frequently asked questions and how to contact us.</p>
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="q">How do I create matchups?</div>
+    <p>Just set the number of players and courts, then tap the shuffle button. The lineup for every court is created automatically.</p>
+    <div class="q">Someone needs to rest or leave mid-session.</div>
+    <p>Choose "Rest / Leave" from the player list. Rest keeps the player's game count and brings them back with next-priority. Leave removes them from the list.</p>
+    <div class="q">What if players arrive late or the count changes?</div>
+    <p>You can add or change players anytime. When the count changes, the matchups are rebuilt automatically.</p>
+    <div class="q">How are matchups decided?</div>
+    <p>Players with fewer games are prioritized, so no one is stuck playing nonstop or sitting out too long. Everyone gets equal court time.</p>
+    <div class="q">Where is my data stored?</div>
+    <p>All data is stored only on your device and is never sent externally. It is deleted when you uninstall the app.</p>
+
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>For questions, requests, or bug reports, please reach us through either of the following:</p>
+      <p>X (formerly Twitter) DM: <a class="inline" href="https://x.com/studiotoggle">https://x.com/studiotoggle</a></p>
+      <p>Email: <span class="email-link"></span></p>
+      <p class="muted">For bugs, it helps to include your device model, iOS version, and what happened.</p>
+    </div>
+    <footer>© 2026 ToggleStudio</footer>
+  </section>
+
+  <!-- Tiếng Việt -->
+  <section id="vi" class="support">
+    <h1>Hỗ trợ</h1>
+    <p>Cảm ơn bạn đã sử dụng Pickler-002. Dưới đây là các câu hỏi thường gặp và cách liên hệ với chúng tôi.</p>
+
+    <h2>Câu hỏi thường gặp</h2>
+    <div class="q">Làm sao để tạo cặp đấu?</div>
+    <p>Chỉ cần nhập số người và số sân, rồi chạm nút xáo trộn. Lịch đấu cho tất cả các sân sẽ được tạo tự động.</p>
+    <div class="q">Có người cần nghỉ hoặc rời giữa chừng?</div>
+    <p>Chọn "Nghỉ / Rời" trong danh sách người chơi. Nghỉ giữ lại số trận và quay lại với ưu tiên lượt sau. Rời sẽ xóa khỏi danh sách.</p>
+    <div class="q">Nếu có người đến muộn hoặc số người thay đổi?</div>
+    <p>Bạn có thể thêm hoặc thay đổi người chơi bất cứ lúc nào. Khi số người thay đổi, cặp đấu sẽ tự tạo lại.</p>
+    <div class="q">Cặp đấu được quyết định thế nào?</div>
+    <p>Ưu tiên người chơi ít trận hơn, để không ai phải đánh liên tục hay ngồi ngoài quá lâu. Mọi người đều được chơi như nhau.</p>
+    <div class="q">Dữ liệu của tôi được lưu ở đâu?</div>
+    <p>Toàn bộ dữ liệu chỉ được lưu trên thiết bị và không bao giờ gửi ra ngoài. Dữ liệu sẽ bị xóa khi gỡ cài đặt ứng dụng.</p>
+
+    <h2>Liên hệ</h2>
+    <div class="contact">
+      <p>Mọi câu hỏi, góp ý hoặc báo lỗi, vui lòng liên hệ qua một trong các cách sau:</p>
+      <p>X (trước đây là Twitter) DM: <a class="inline" href="https://x.com/studiotoggle">https://x.com/studiotoggle</a></p>
+      <p>Email: <span class="email-link"></span></p>
+      <p class="muted">Khi báo lỗi, hãy cho biết dòng máy, phiên bản iOS và tình huống gặp phải.</p>
+    </div>
+    <footer>© 2026 ToggleStudio</footer>
+  </section>
+
+  <!-- 한국어 -->
+  <section id="ko" class="support">
+    <h1>지원</h1>
+    <p>Pickler-002를 이용해 주셔서 감사합니다. 자주 묻는 질문과 문의 방법을 안내합니다.</p>
+
+    <h2>자주 묻는 질문</h2>
+    <div class="q">대진은 어떻게 만드나요?</div>
+    <p>인원과 코트 수를 설정하고 셔플 버튼을 누르기만 하면 됩니다. 모든 코트의 대진표가 자동으로 만들어집니다.</p>
+    <div class="q">도중에 쉬거나 이탈할 사람이 있어요.</div>
+    <p>플레이어 목록에서 "휴식 / 이탈"을 선택하세요. 휴식은 참가 횟수를 유지하고 다음 우선으로 복귀합니다. 이탈은 목록에서 제외합니다.</p>
+    <div class="q">늦게 합류하거나 인원이 바뀌면?</div>
+    <p>언제든지 플레이어를 추가·변경할 수 있습니다. 인원이 바뀌면 대진이 자동으로 다시 만들어집니다.</p>
+    <div class="q">대진은 어떻게 정해지나요?</div>
+    <p>참가 횟수가 적은 사람을 우선 배정해, 누구도 계속 뛰거나 너무 오래 쉬지 않습니다. 모두가 똑같이 플레이할 수 있습니다.</p>
+    <div class="q">데이터는 어디에 저장되나요?</div>
+    <p>모든 데이터는 기기 내에만 저장되며 외부로 전송되지 않습니다. 앱을 삭제하면 함께 삭제됩니다.</p>
+
+    <h2>문의</h2>
+    <div class="contact">
+      <p>질문, 요청, 버그 신고는 아래 중 하나로 연락해 주세요.</p>
+      <p>X(구 Twitter) DM: <a class="inline" href="https://x.com/studiotoggle">https://x.com/studiotoggle</a></p>
+      <p>이메일: <span class="email-link"></span></p>
+      <p class="muted">버그의 경우 기기 모델, iOS 버전, 상황을 알려주시면 도움이 됩니다.</p>
+    </div>
+    <footer>© 2026 ToggleStudio</footer>
+  </section>
+
+  <!-- 简体中文 -->
+  <section id="zh" class="support">
+    <h1>支持</h1>
+    <p>感谢您使用 Pickler-002。以下是常见问题以及联系方式。</p>
+
+    <h2>常见问题</h2>
+    <div class="q">如何生成组合？</div>
+    <p>只需设置人数和球场数，然后点击随机分配按钮。所有球场的对阵表会自动生成。</p>
+    <div class="q">中途有人需要休息或离场？</div>
+    <p>在玩家列表中选择"休息 / 离开"。休息会保留场次并以下轮优先回归；离开则将其从列表中移除。</p>
+    <div class="q">如果有人迟到或人数变化怎么办？</div>
+    <p>您可以随时添加或更改玩家。人数变化时，组合会自动重新生成。</p>
+    <div class="q">组合是如何决定的？</div>
+    <p>优先安排上场次数较少的人，避免有人一直打、有人一直歇，让每个人都能平等上场。</p>
+    <div class="q">我的数据保存在哪里？</div>
+    <p>所有数据仅保存在您的设备上，绝不会发送到外部。卸载应用后即会删除。</p>
+
+    <h2>联系方式</h2>
+    <div class="contact">
+      <p>如有问题、建议或故障报告，请通过以下任一方式联系我们：</p>
+      <p>X（原 Twitter）私信：<a class="inline" href="https://x.com/studiotoggle">https://x.com/studiotoggle</a></p>
+      <p>邮箱：<span class="email-link"></span></p>
+      <p class="muted">报告故障时，请提供您的机型、iOS 版本和具体情况。</p>
+    </div>
+    <footer>© 2026 ToggleStudio</footer>
+  </section>
+
+</div>
+
+<script>
+  (function () {
+    // --- 言語切り替え ---
+    var langs = ["ja", "en", "vi", "ko", "zh"];
+    function show(lang) {
+      if (langs.indexOf(lang) === -1) lang = "ja";
+      langs.forEach(function (l) {
+        var sec = document.getElementById(l);
+        if (sec) sec.classList.toggle("active", l === lang);
+      });
+      document.querySelectorAll("nav.langs a").forEach(function (a) {
+        a.classList.toggle("current", a.getAttribute("href") === "#" + lang);
+      });
+      document.documentElement.lang = lang === "zh" ? "zh-Hans" : lang;
+    }
+    function fromHash() { show((location.hash || "#ja").replace("#", "")); }
+    window.addEventListener("hashchange", fromHash);
+    fromHash();
+
+    // --- メールアドレス(難読化を復元してリンク化) ---
+    var addr = atob("dG9nZ2xlc3R1ZGlvMEBnbWFpbC5jb20=");
+    document.querySelectorAll(".email-link").forEach(function (span) {
+      var a = document.createElement("a");
+      a.className = "inline";
+      a.href = "mailto:" + addr;
+      a.textContent = addr;
+      span.appendChild(a);
+    });
+  })();
+</script>
+</body>
+</html>
