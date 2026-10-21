@@ -50,21 +50,32 @@
 
     <h2>よくある質問</h2>
     <div class="q">組み合わせはどうやって作りますか?</div>
-    <p>参加人数とコート数を設定し、シャッフルボタンを押すだけです。全コートの対戦カードが自動で作られます。</p>
-    <div class="q">途中で休憩・離脱したい人がいます。</div>
-    <p>プレイヤーの一覧から「休憩・離脱」を選べます。休憩は参加回数を保持したまま、次回優先で戻れます。離脱は一覧から外します。</p>
-    <div class="q">遅れて参加したり、人数が変わったときは?</div>
-    <p>いつでもプレイヤーを追加・変更できます。人数を変えると、組み合わせは自動で作り直されます。</p>
+    <p>最初の画面で「試合形式(ダブルス/シングルス)」「コート数」「参加人数」を設定して「はじめる」をタップします。乱数表の画面で「シャッフル開始」を押すと、全コートの組み合わせが自動で作られます。次の試合は「次のラウンドへ」で作ります。</p>
     <div class="q">組み合わせはどう決まりますか?</div>
-    <p>参加回数の少ない人を優先して選びます。特定の人が出ずっぱり・休みっぱなしになりにくく、みんなが平等にプレイできます。</p>
+    <p>試合数が少ない人から優先して出場し、休憩が2回続かないように調整します。さらに、独自のアルゴリズムで毎ラウンド40通りの候補を作り、「同じ人と同じコートになる回数」が最も少ない組み合わせを選びます。</p>
+    <div class="q">途中で休憩・離脱したい人がいます。</div>
+    <p>「プレイヤー設定」画面で、その人の行の「休憩・離脱」ボタンを押します。休憩は試合数を保持したまま、復帰時は次回優先で戻れます。離脱は一覧から外します。</p>
+    <div class="q">遅れて参加したり、人数が変わったときは?</div>
+    <p>「プレイヤー設定」画面の「プレイヤーを追加」から、いつでも追加できます。追加した人は「⭐️ 次回優先」で次のシャッフルに必ず入り、全体の平均に合わせて公平に組み込まれます。</p>
+    <div class="q">ペア固定・男女混合・シングルスはできますか?</div>
+    <p>できます。シングルスは最初の画面の「試合形式」で選びます。ペア固定と男女混合は、ダブルスのときに「詳細設定」から選べます。</p>
+    <div class="q">🔰初心者マークとは何ですか?</div>
+    <p>「プレイヤー設定」画面で番号を長押しすると付けられます。初心者どうしが同じコートになりやすくなります。マークはホストの画面にだけ表示され、ゲストには見えません。</p>
+    <div class="q">乱数表をみんなのスマホで見るには?</div>
+    <p>ホストは「プレイヤー設定」画面の「乱数表を共有する」をタップし、表示されたコード(通常2桁)を参加者に伝えます。参加者は、最初の画面の「ゲストとして入る」からコードを入力します。共有にはインターネット接続が必要です。</p>
+    <div class="q">ゲストは何ができますか?</div>
+    <p>乱数表・スケジュール・プレイヤー一覧・セッション情報を閲覧できます(操作はホストのみ)。自分の番号を「私」に設定すると、自分のカードが目立つ色で表示されます。参加から12時間たつと自動で退出します。</p>
+    <div class="q">アラームの使い方は?</div>
+    <p>乱数表の画面右上の経過時間をタップし、時間とサウンドを選んで「開始」を押します。設定した時間になると、「止める」を押すまで鳴り続けます。アラームはアプリを開いている間に鳴ります。</p>
+    <div class="q">セッションを終わらせるには?</div>
+    <p>画面上部の「退出」をタップすると、セッションを終了して最初の画面に戻ります。最初のシャッフルから12時間たつと、自動でリセットされます。</p>
     <div class="q">データはどこに保存されますか?</div>
-    <p>すべて端末内にのみ保存されます。外部に送信されることはありません。アプリをアンインストールすると削除されます。</p>
+    <p>通常は端末内にのみ保存されます。「乱数表の共有」を使ったときだけ、共有中のセッションのデータ(プレイヤー番号・入力した名前・組み合わせなど)を Google の Firebase に送信します。コードを知っている人は閲覧できるため、コードは参加者にだけ伝えてください。🔰初心者マークは送信しません。詳しくはプライバシーポリシーをご覧ください。</p>
 
     <h2>お問い合わせ</h2>
     <div class="contact">
-      <p>ご質問・ご要望・不具合の報告は、以下のいずれかまでご連絡ください。</p>
-      <p>X(旧Twitter)DM:<a class="inline" href="https://x.com/studiotoggle">https://x.com/studiotoggle</a></p>
-      <p>メール:<span class="email-link"></span></p>
+      <p>ご質問・ご要望・不具合の報告は、Instagram の DM までご連絡ください。</p>
+      <p>Instagram:<a class="inline" href="https://www.instagram.com/toggle._.studio/">@toggle._.studio</a></p>
       <p class="muted">不具合の場合は、お使いの機種・iOS のバージョン・状況を教えていただけると助かります。</p>
     </div>
     <footer>© 2026 ToggleStudio</footer>
@@ -77,21 +88,32 @@
 
     <h2>Frequently Asked Questions</h2>
     <div class="q">How do I create matchups?</div>
-    <p>Just set the number of players and courts, then tap the shuffle button. The lineup for every court is created automatically.</p>
-    <div class="q">Someone needs to rest or leave mid-session.</div>
-    <p>Choose "Rest / Leave" from the player list. Rest keeps the player's game count and brings them back with next-priority. Leave removes them from the list.</p>
-    <div class="q">What if players arrive late or the count changes?</div>
-    <p>You can add or change players anytime. When the count changes, the matchups are rebuilt automatically.</p>
+    <p>On the first screen, set the match type (Doubles / Singles), the number of courts and players, then tap "Start". On the matchups screen, tap "Start shuffle" to create the lineup for every court. Tap "Next round" for the next games.</p>
     <div class="q">How are matchups decided?</div>
-    <p>Players with fewer games are prioritized, so no one is stuck playing nonstop or sitting out too long. Everyone gets equal court time.</p>
+    <p>Players with fewer games go first, and nobody rests twice in a row. Our own algorithm also checks 40 candidate lineups every round and picks the one where people share a court with the same players the least.</p>
+    <div class="q">Someone needs to rest or leave mid-session.</div>
+    <p>On the "Player Setup" screen, tap the "Rest / Leave" button on that player's row. Rest keeps their game count and brings them back with next-priority. Leave removes them from the list.</p>
+    <div class="q">What if players arrive late or the count changes?</div>
+    <p>Tap "Add player" on the "Player Setup" screen anytime. New players get "⭐️ Next priority", always join the next shuffle, and are fitted in fairly based on the group average.</p>
+    <div class="q">Can I use fixed pairs, mixed doubles or singles?</div>
+    <p>Yes. Choose Singles in "Match type" on the first screen. Fixed pairs and mixed doubles are available in "Advanced" when playing doubles.</p>
+    <div class="q">What is the 🔰 beginner mark?</div>
+    <p>Long-press a player's number on the "Player Setup" screen to add it. Beginners are more likely to be placed on the same court. The mark is shown only to the host, not to guests.</p>
+    <div class="q">How can everyone see the matchups on their phones?</div>
+    <p>The host taps "Share the matchups" on the "Player Setup" screen and tells everyone the code shown (usually 2 digits). Others tap "Join as guest" on the first screen and enter the code. An internet connection is required.</p>
+    <div class="q">What can guests do?</div>
+    <p>Guests can view the matchups, schedule, player list and session info (only the host can make changes). Setting your own number as "Me" highlights your card. Guests leave automatically 12 hours after joining.</p>
+    <div class="q">How do I use the alarm?</div>
+    <p>Tap the elapsed time at the top right of the matchups screen, choose the time and sound, then tap "Start". When time is up, it keeps ringing until you tap "Stop". The alarm rings while the app is open.</p>
+    <div class="q">How do I end a session?</div>
+    <p>Tap "Leave" at the top of the screen to end the session and return to the first screen. Sessions also reset automatically 12 hours after the first shuffle.</p>
     <div class="q">Where is my data stored?</div>
-    <p>All data is stored only on your device and is never sent externally. It is deleted when you uninstall the app.</p>
+    <p>Normally, data is stored only on your device. Only when you use "Share the matchups" is the shared session data (player numbers, names you entered, matchups, etc.) sent to Google Firebase. Anyone who knows the code can view it, so share the code only with participants. 🔰 beginner marks are not sent. See the privacy policy for details.</p>
 
     <h2>Contact</h2>
     <div class="contact">
-      <p>For questions, requests, or bug reports, please reach us through either of the following:</p>
-      <p>X (formerly Twitter) DM: <a class="inline" href="https://x.com/studiotoggle">https://x.com/studiotoggle</a></p>
-      <p>Email: <span class="email-link"></span></p>
+      <p>For questions, requests, or bug reports, please send us a DM on Instagram.</p>
+      <p>Instagram: <a class="inline" href="https://www.instagram.com/toggle._.studio/">@toggle._.studio</a></p>
       <p class="muted">For bugs, it helps to include your device model, iOS version, and what happened.</p>
     </div>
     <footer>© 2026 ToggleStudio</footer>
@@ -104,21 +126,32 @@
 
     <h2>Câu hỏi thường gặp</h2>
     <div class="q">Làm sao để tạo cặp đấu?</div>
-    <p>Chỉ cần nhập số người và số sân, rồi chạm nút xáo trộn. Lịch đấu cho tất cả các sân sẽ được tạo tự động.</p>
-    <div class="q">Có người cần nghỉ hoặc rời giữa chừng?</div>
-    <p>Chọn "Nghỉ / Rời" trong danh sách người chơi. Nghỉ giữ lại số trận và quay lại với ưu tiên lượt sau. Rời sẽ xóa khỏi danh sách.</p>
-    <div class="q">Nếu có người đến muộn hoặc số người thay đổi?</div>
-    <p>Bạn có thể thêm hoặc thay đổi người chơi bất cứ lúc nào. Khi số người thay đổi, cặp đấu sẽ tự tạo lại.</p>
+    <p>Ở màn hình đầu tiên, chọn thể thức (Đánh đôi / Đánh đơn), số sân và số người, rồi chạm "Bắt đầu". Trên màn hình bảng ghép cặp, chạm "Bắt đầu xáo trộn" để tạo cặp đấu cho tất cả các sân. Chạm "Vòng tiếp theo" để tạo ván kế tiếp.</p>
     <div class="q">Cặp đấu được quyết định thế nào?</div>
-    <p>Ưu tiên người chơi ít trận hơn, để không ai phải đánh liên tục hay ngồi ngoài quá lâu. Mọi người đều được chơi như nhau.</p>
+    <p>Ưu tiên người chơi ít trận hơn, và không ai phải nghỉ hai lượt liên tiếp. Thuật toán riêng còn xem xét 40 phương án mỗi vòng và chọn phương án ít trùng người cùng sân nhất.</p>
+    <div class="q">Có người cần nghỉ hoặc rời giữa chừng?</div>
+    <p>Trên màn hình "Thiết lập người chơi", chạm nút "Nghỉ / Rời" ở hàng của người đó. Nghỉ giữ lại số trận và quay lại với ưu tiên lượt sau. Rời sẽ xóa khỏi danh sách.</p>
+    <div class="q">Nếu có người đến muộn hoặc số người thay đổi?</div>
+    <p>Chạm "Thêm người chơi" trên màn hình "Thiết lập người chơi" bất cứ lúc nào. Người mới được "⭐️ Ưu tiên lượt sau", chắc chắn vào lượt xáo trộn tiếp theo và được xếp công bằng theo mức trung bình của cả nhóm.</p>
+    <div class="q">Có thể dùng cặp cố định, đôi nam nữ hoặc đánh đơn không?</div>
+    <p>Có. Chọn Đánh đơn ở mục "Thể thức" trên màn hình đầu tiên. Cặp cố định và đôi nam nữ có trong "Nâng cao" khi đánh đôi.</p>
+    <div class="q">Dấu 🔰 người mới là gì?</div>
+    <p>Nhấn giữ số của người chơi trên màn hình "Thiết lập người chơi" để gắn dấu. Những người mới sẽ dễ được xếp cùng sân hơn. Dấu chỉ hiển thị cho chủ phòng, không hiển thị cho khách.</p>
+    <div class="q">Làm sao để mọi người xem bảng ghép cặp trên điện thoại?</div>
+    <p>Chủ phòng chạm "Chia sẻ bảng ghép cặp" trên màn hình "Thiết lập người chơi" và đọc mã hiển thị (thường gồm 2 chữ số) cho mọi người. Người khác chạm "Vào với tư cách khách" ở màn hình đầu tiên và nhập mã. Cần kết nối Internet.</p>
+    <div class="q">Khách có thể làm gì?</div>
+    <p>Khách có thể xem bảng ghép cặp, lịch, danh sách người chơi và thông tin phiên (chỉ chủ phòng mới có thể thay đổi). Đặt số của mình là "Tôi" để thẻ của mình được làm nổi bật. Khách tự động rời sau 12 giờ kể từ khi tham gia.</p>
+    <div class="q">Cách dùng báo thức?</div>
+    <p>Chạm vào thời gian đã trôi qua ở góc trên bên phải màn hình bảng ghép cặp, chọn thời gian và âm thanh, rồi chạm "Bắt đầu". Khi hết giờ, báo thức sẽ kêu liên tục cho đến khi bạn chạm "Dừng". Báo thức kêu khi ứng dụng đang mở.</p>
+    <div class="q">Làm sao để kết thúc phiên?</div>
+    <p>Chạm "Rời" ở phía trên màn hình để kết thúc phiên và quay về màn hình đầu tiên. Phiên cũng tự động đặt lại sau 12 giờ kể từ lần xáo trộn đầu tiên.</p>
     <div class="q">Dữ liệu của tôi được lưu ở đâu?</div>
-    <p>Toàn bộ dữ liệu chỉ được lưu trên thiết bị và không bao giờ gửi ra ngoài. Dữ liệu sẽ bị xóa khi gỡ cài đặt ứng dụng.</p>
+    <p>Thông thường dữ liệu chỉ được lưu trên thiết bị. Chỉ khi dùng "Chia sẻ bảng ghép cặp", dữ liệu của phiên đang chia sẻ (số người chơi, tên đã nhập, cặp đấu, v.v.) mới được gửi đến Google Firebase. Bất kỳ ai biết mã đều có thể xem, vì vậy chỉ đưa mã cho người tham gia. Dấu 🔰 người mới không được gửi. Xem chính sách quyền riêng tư để biết chi tiết.</p>
 
     <h2>Liên hệ</h2>
     <div class="contact">
-      <p>Mọi câu hỏi, góp ý hoặc báo lỗi, vui lòng liên hệ qua một trong các cách sau:</p>
-      <p>X (trước đây là Twitter) DM: <a class="inline" href="https://x.com/studiotoggle">https://x.com/studiotoggle</a></p>
-      <p>Email: <span class="email-link"></span></p>
+      <p>Mọi câu hỏi, góp ý hoặc báo lỗi, vui lòng nhắn tin (DM) cho chúng tôi qua Instagram.</p>
+      <p>Instagram: <a class="inline" href="https://www.instagram.com/toggle._.studio/">@toggle._.studio</a></p>
       <p class="muted">Khi báo lỗi, hãy cho biết dòng máy, phiên bản iOS và tình huống gặp phải.</p>
     </div>
     <footer>© 2026 ToggleStudio</footer>
@@ -131,21 +164,32 @@
 
     <h2>자주 묻는 질문</h2>
     <div class="q">대진은 어떻게 만드나요?</div>
-    <p>인원과 코트 수를 설정하고 셔플 버튼을 누르기만 하면 됩니다. 모든 코트의 대진표가 자동으로 만들어집니다.</p>
-    <div class="q">도중에 쉬거나 이탈할 사람이 있어요.</div>
-    <p>플레이어 목록에서 "휴식 / 이탈"을 선택하세요. 휴식은 참가 횟수를 유지하고 다음 우선으로 복귀합니다. 이탈은 목록에서 제외합니다.</p>
-    <div class="q">늦게 합류하거나 인원이 바뀌면?</div>
-    <p>언제든지 플레이어를 추가·변경할 수 있습니다. 인원이 바뀌면 대진이 자동으로 다시 만들어집니다.</p>
+    <p>첫 화면에서 경기 방식(복식/단식), 코트 수, 인원을 설정하고 '시작'을 탭합니다. 대진표 화면에서 '셔플 시작'을 누르면 모든 코트의 대진이 자동으로 만들어집니다. 다음 경기는 '다음 라운드'로 만듭니다.</p>
     <div class="q">대진은 어떻게 정해지나요?</div>
-    <p>참가 횟수가 적은 사람을 우선 배정해, 누구도 계속 뛰거나 너무 오래 쉬지 않습니다. 모두가 똑같이 플레이할 수 있습니다.</p>
+    <p>경기 수가 적은 사람부터 우선 출전하고, 휴식이 두 번 연속되지 않도록 조정합니다. 또한 독자적인 알고리즘으로 매 라운드 40가지 후보 중 '같은 사람과 같은 코트가 되는 횟수'가 가장 적은 대진을 선택합니다.</p>
+    <div class="q">도중에 쉬거나 이탈할 사람이 있어요.</div>
+    <p>'플레이어 설정' 화면에서 그 사람 줄의 '휴식 / 이탈' 버튼을 누르세요. 휴식은 경기 수를 유지하고 다음 우선으로 복귀합니다. 이탈은 목록에서 제외합니다.</p>
+    <div class="q">늦게 합류하거나 인원이 바뀌면?</div>
+    <p>'플레이어 설정' 화면의 '플레이어 추가'로 언제든지 추가할 수 있습니다. 추가된 사람은 '⭐️ 다음 우선'으로 다음 셔플에 반드시 포함되며, 전체 평균에 맞춰 공정하게 배정됩니다.</p>
+    <div class="q">고정 페어, 혼합 복식, 단식도 가능한가요?</div>
+    <p>가능합니다. 단식은 첫 화면의 '경기 방식'에서 선택합니다. 고정 페어와 혼합 복식은 복식일 때 '고급 설정'에서 선택할 수 있습니다.</p>
+    <div class="q">🔰 초보자 마크란 무엇인가요?</div>
+    <p>'플레이어 설정' 화면에서 번호를 길게 누르면 붙일 수 있습니다. 초보자끼리 같은 코트에 배정되기 쉬워집니다. 마크는 호스트 화면에만 표시되며 게스트에게는 보이지 않습니다.</p>
+    <div class="q">모두의 스마트폰에서 대진표를 보려면?</div>
+    <p>호스트가 '플레이어 설정' 화면의 '대진표 공유하기'를 탭하고, 표시된 코드(보통 2자리)를 참가자에게 알려줍니다. 참가자는 첫 화면의 '게스트로 입장'에서 코드를 입력합니다. 인터넷 연결이 필요합니다.</p>
+    <div class="q">게스트는 무엇을 할 수 있나요?</div>
+    <p>대진표·일정·플레이어 목록·세션 정보를 볼 수 있습니다(조작은 호스트만 가능). 자신의 번호를 '나'로 설정하면 자신의 카드가 눈에 띄는 색으로 표시됩니다. 입장 후 12시간이 지나면 자동으로 나갑니다.</p>
+    <div class="q">알람은 어떻게 사용하나요?</div>
+    <p>대진표 화면 오른쪽 위의 경과 시간을 탭하고, 시간과 사운드를 선택한 뒤 '시작'을 누릅니다. 설정한 시간이 되면 '중지'를 누를 때까지 계속 울립니다. 알람은 앱이 열려 있는 동안 울립니다.</p>
+    <div class="q">세션을 끝내려면?</div>
+    <p>화면 상단의 '나가기'를 탭하면 세션을 종료하고 첫 화면으로 돌아갑니다. 첫 셔플로부터 12시간이 지나면 자동으로 초기화됩니다.</p>
     <div class="q">데이터는 어디에 저장되나요?</div>
-    <p>모든 데이터는 기기 내에만 저장되며 외부로 전송되지 않습니다. 앱을 삭제하면 함께 삭제됩니다.</p>
+    <p>평소에는 기기 내에만 저장됩니다. '대진표 공유하기'를 사용할 때만 공유 중인 세션의 데이터(플레이어 번호, 입력한 이름, 대진 등)를 Google Firebase로 전송합니다. 코드를 아는 사람은 누구나 볼 수 있으므로 코드는 참가자에게만 알려주세요. 🔰 초보자 마크는 전송하지 않습니다. 자세한 내용은 개인정보 처리방침을 확인해 주세요.</p>
 
     <h2>문의</h2>
     <div class="contact">
-      <p>질문, 요청, 버그 신고는 아래 중 하나로 연락해 주세요.</p>
-      <p>X(구 Twitter) DM: <a class="inline" href="https://x.com/studiotoggle">https://x.com/studiotoggle</a></p>
-      <p>이메일: <span class="email-link"></span></p>
+      <p>질문, 요청, 버그 신고는 Instagram DM으로 연락해 주세요.</p>
+      <p>Instagram: <a class="inline" href="https://www.instagram.com/toggle._.studio/">@toggle._.studio</a></p>
       <p class="muted">버그의 경우 기기 모델, iOS 버전, 상황을 알려주시면 도움이 됩니다.</p>
     </div>
     <footer>© 2026 ToggleStudio</footer>
@@ -157,22 +201,33 @@
     <p>感谢您使用 Pickler-002。以下是常见问题以及联系方式。</p>
 
     <h2>常见问题</h2>
-    <div class="q">如何生成组合？</div>
-    <p>只需设置人数和球场数，然后点击随机分配按钮。所有球场的对阵表会自动生成。</p>
+    <div class="q">如何生成对阵？</div>
+    <p>在初始页面设置比赛形式（双打/单打）、场地数和人数，然后点按“开始”。在对阵表页面点按“开始分配”，即可自动生成所有场地的对阵。下一场请点按“下一轮”。</p>
+    <div class="q">对阵是如何决定的？</div>
+    <p>优先安排场数较少的人上场，并避免连续休息两轮。此外，独有算法每轮从40种候选方案中，选出“与同一人同场次数”最少的对阵。</p>
     <div class="q">中途有人需要休息或离场？</div>
-    <p>在玩家列表中选择"休息 / 离开"。休息会保留场次并以下轮优先回归；离开则将其从列表中移除。</p>
+    <p>在“玩家设置”页面，点按该玩家所在行的“休息 / 离开”按钮。休息会保留场数并以下轮优先回归；离开则将其从列表中移除。</p>
     <div class="q">如果有人迟到或人数变化怎么办？</div>
-    <p>您可以随时添加或更改玩家。人数变化时，组合会自动重新生成。</p>
-    <div class="q">组合是如何决定的？</div>
-    <p>优先安排上场次数较少的人，避免有人一直打、有人一直歇，让每个人都能平等上场。</p>
+    <p>可随时在“玩家设置”页面点按“添加玩家”。新加入的人会获得“⭐️ 下轮优先”，必定进入下一次分配，并根据整体平均公平地安排。</p>
+    <div class="q">可以使用固定搭档、混合双打或单打吗？</div>
+    <p>可以。单打请在初始页面的“比赛形式”中选择。固定搭档和混合双打可在双打时从“高级设置”中选择。</p>
+    <div class="q">什么是🔰新手标记？</div>
+    <p>在“玩家设置”页面长按号码即可添加。新手之间更容易被分到同一场地。标记只在主持人的画面中显示，访客看不到。</p>
+    <div class="q">如何让大家在手机上查看对阵表？</div>
+    <p>主持人在“玩家设置”页面点按“共享对阵表”，然后将显示的码（通常为2位）告诉参加者。其他人在初始页面点按“以访客身份加入”并输入码。需要连接互联网。</p>
+    <div class="q">访客可以做什么？</div>
+    <p>访客可以查看对阵表、赛程、玩家列表和场次信息（只有主持人可以操作）。将自己的号码设为“我”后，自己的卡片会以醒目的颜色显示。访客会在加入12小时后自动退出。</p>
+    <div class="q">如何使用闹钟？</div>
+    <p>点按对阵表页面右上角的经过时间，选择时间和声音后点按“开始”。到达设定时间后，会一直响铃，直到点按“停止”。闹钟在应用打开时响铃。</p>
+    <div class="q">如何结束本场？</div>
+    <p>点按画面顶部的“退出”，即可结束本场并返回初始页面。自第一次分配起12小时后，本场也会自动重置。</p>
     <div class="q">我的数据保存在哪里？</div>
-    <p>所有数据仅保存在您的设备上，绝不会发送到外部。卸载应用后即会删除。</p>
+    <p>通常数据仅保存在您的设备上。只有在使用“共享对阵表”时，才会将共享中的场次数据（玩家号码、输入的姓名、对阵等）发送到 Google Firebase。知道共享码的人都可以查看，因此请只将共享码告诉参加者。🔰新手标记不会被发送。详情请参阅隐私政策。</p>
 
     <h2>联系方式</h2>
     <div class="contact">
-      <p>如有问题、建议或故障报告，请通过以下任一方式联系我们：</p>
-      <p>X（原 Twitter）私信：<a class="inline" href="https://x.com/studiotoggle">https://x.com/studiotoggle</a></p>
-      <p>邮箱：<span class="email-link"></span></p>
+      <p>如有问题、建议或故障报告，请通过 Instagram 私信联系我们。</p>
+      <p>Instagram：<a class="inline" href="https://www.instagram.com/toggle._.studio/">@toggle._.studio</a></p>
       <p class="muted">报告故障时，请提供您的机型、iOS 版本和具体情况。</p>
     </div>
     <footer>© 2026 ToggleStudio</footer>
@@ -198,16 +253,6 @@
     function fromHash() { show((location.hash || "#ja").replace("#", "")); }
     window.addEventListener("hashchange", fromHash);
     fromHash();
-
-    // --- メールアドレス(難読化を復元してリンク化) ---
-    var addr = atob("dG9nZ2xlc3R1ZGlvMEBnbWFpbC5jb20=");
-    document.querySelectorAll(".email-link").forEach(function (span) {
-      var a = document.createElement("a");
-      a.className = "inline";
-      a.href = "mailto:" + addr;
-      a.textContent = addr;
-      span.appendChild(a);
-    });
   })();
 </script>
 </body>
