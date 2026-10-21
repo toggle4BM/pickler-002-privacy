@@ -16,6 +16,11 @@
   nav.langs { display:flex; flex-wrap:wrap; gap:8px; margin:16px 0 8px; }
   nav.langs a { font-size:13px; text-decoration:none; color:var(--muted);
                 border:1px solid var(--line); border-radius:999px; padding:6px 12px; cursor:pointer; }
+  nav.pages { display:flex; gap:20px; margin:10px 0 0; }
+  nav.pages a { font-size:14px; font-weight:700; text-decoration:none; color:var(--muted);
+                padding:2px 0 6px; border-bottom:2px solid transparent; }
+  nav.pages a:hover { color:var(--fg); }
+  nav.pages a.current { color:var(--fg); border-bottom-color:var(--accent); }
   nav.langs a:hover { color:var(--fg); border-color:var(--accent); }
   nav.langs a.current { color:var(--fg); border-color:var(--accent); background:#f3fbf8; }
   section.support { display:none; padding-top:12px; }
@@ -34,6 +39,10 @@
 <div class="wrap">
   <header class="top">
     <div class="brand">Pickler-002</div>
+    <nav class="pages">
+      <a data-page="privacy" href="index.html">プライバシーポリシー</a>
+      <a data-page="support" href="support.html" class="current" aria-current="page">サポート</a>
+    </nav>
     <nav class="langs">
       <a href="#ja">日本語</a>
       <a href="#en">English</a>
@@ -44,7 +53,7 @@
   </header>
 
   <!-- 日本語 -->
-  <section id="ja" class="support active">
+  <section id="sec-ja" class="support active">
     <h1>サポート</h1>
     <p>Pickler-002 をご利用いただきありがとうございます。よくある質問と、お問い合わせ先をご案内します。</p>
 
@@ -82,7 +91,7 @@
   </section>
 
   <!-- English -->
-  <section id="en" class="support">
+  <section id="sec-en" class="support">
     <h1>Support</h1>
     <p>Thank you for using Pickler-002. Below are frequently asked questions and how to contact us.</p>
 
@@ -120,7 +129,7 @@
   </section>
 
   <!-- Tiếng Việt -->
-  <section id="vi" class="support">
+  <section id="sec-vi" class="support">
     <h1>Hỗ trợ</h1>
     <p>Cảm ơn bạn đã sử dụng Pickler-002. Dưới đây là các câu hỏi thường gặp và cách liên hệ với chúng tôi.</p>
 
@@ -158,7 +167,7 @@
   </section>
 
   <!-- 한국어 -->
-  <section id="ko" class="support">
+  <section id="sec-ko" class="support">
     <h1>지원</h1>
     <p>Pickler-002를 이용해 주셔서 감사합니다. 자주 묻는 질문과 문의 방법을 안내합니다.</p>
 
@@ -196,7 +205,7 @@
   </section>
 
   <!-- 简体中文 -->
-  <section id="zh" class="support">
+  <section id="sec-zh" class="support">
     <h1>支持</h1>
     <p>感谢您使用 Pickler-002。以下是常见问题以及联系方式。</p>
 
@@ -239,16 +248,32 @@
   (function () {
     // --- 言語切り替え ---
     var langs = ["ja", "en", "vi", "ko", "zh"];
+    // --- プライバシーポリシー / サポート の切り替え(表示中の言語を引き継ぐ) ---
+    var pageLabels = {
+      ja: ["プライバシーポリシー", "サポート"],
+      en: ["Privacy Policy", "Support"],
+      vi: ["Chính sách quyền riêng tư", "Hỗ trợ"],
+      ko: ["개인정보 처리방침", "지원"],
+      zh: ["隐私政策", "支持"]
+    };
+    function updatePages(lang) {
+      var labels = pageLabels[lang] || pageLabels.ja;
+      var priv = document.querySelector('nav.pages a[data-page="privacy"]');
+      var sup = document.querySelector('nav.pages a[data-page="support"]');
+      if (priv) { priv.textContent = labels[0]; priv.href = "index.html#" + lang; }
+      if (sup) { sup.textContent = labels[1]; sup.href = "support.html#" + lang; }
+    }
     function show(lang) {
       if (langs.indexOf(lang) === -1) lang = "ja";
       langs.forEach(function (l) {
-        var sec = document.getElementById(l);
+        var sec = document.getElementById("sec-" + l);   // id を言語コードと分けて、#ja などで自動スクロールしないように
         if (sec) sec.classList.toggle("active", l === lang);
       });
       document.querySelectorAll("nav.langs a").forEach(function (a) {
         a.classList.toggle("current", a.getAttribute("href") === "#" + lang);
       });
       document.documentElement.lang = lang === "zh" ? "zh-Hans" : lang;
+      updatePages(lang);
     }
     function fromHash() { show((location.hash || "#ja").replace("#", "")); }
     window.addEventListener("hashchange", fromHash);

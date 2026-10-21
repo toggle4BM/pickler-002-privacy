@@ -16,6 +16,11 @@
   nav.langs { display:flex; flex-wrap:wrap; gap:8px; margin:16px 0 8px; }
   nav.langs a { font-size:13px; text-decoration:none; color:var(--muted);
                 border:1px solid var(--line); border-radius:999px; padding:6px 12px; }
+  nav.pages { display:flex; gap:20px; margin:10px 0 0; }
+  nav.pages a { font-size:14px; font-weight:700; text-decoration:none; color:var(--muted);
+                padding:2px 0 6px; border-bottom:2px solid transparent; }
+  nav.pages a:hover { color:var(--fg); }
+  nav.pages a.current { color:var(--fg); border-bottom-color:var(--accent); }
   nav.langs a:hover { color:var(--fg); border-color:var(--accent); }
   section.policy { display:none; padding-top:12px; }
   section.policy.active { display:block; }
@@ -33,6 +38,10 @@
 <div class="wrap">
   <header class="top">
     <div class="brand">Pickler-002</div>
+    <nav class="pages">
+      <a data-page="privacy" href="index.html" class="current" aria-current="page">プライバシーポリシー</a>
+      <a data-page="support" href="support.html">サポート</a>
+    </nav>
     <nav class="langs">
       <a href="#ja">日本語</a>
       <a href="#en">English</a>
@@ -43,172 +52,232 @@
   </header>
 
   <!-- 日本語 -->
-  <section id="ja" class="policy active">
+  <section id="sec-ja" class="policy active">
     <h1>プライバシーポリシー</h1>
     <p><strong>Pickler-002</strong>(以下「本アプリ」)は、ToggleStudio(以下「当方」)が提供するアプリケーションです。当方は、利用者のプライバシーを尊重し、データの取り扱いについて以下のとおり本ポリシーを定めます。</p>
-    <p class="muted">最終更新日:2026年6月21日</p>
+    <p class="muted">最終更新日:2026年10月21日</p>
 
     <h2>1. 本アプリが取り扱うデータ</h2>
-    <p>本アプリは、利用者が入力したデータ(プレイヤー名、参加人数、コート数、参加回数、組み合わせの記録など)を、利用者の端末内にのみ保存します。これらのデータが当方のサーバーや外部に送信されることはありません。本アプリは、氏名・メールアドレス・電話番号・位置情報などの個人を特定する情報を収集しません。アカウント登録機能はありません。</p>
+    <p>本アプリは、利用者が入力したデータ(プレイヤー名、参加人数、コート数、参加回数、組み合わせの記録など)を、利用者の端末内に保存します。次項の「乱数表の共有」機能を利用した場合を除き、これらのデータが当方のサーバーや外部に送信されることはありません。本アプリは、氏名・メールアドレス・電話番号・位置情報などの個人を特定する情報を収集しません。アカウント登録機能はありません。</p>
 
-    <h2>2. 広告について</h2>
+    <h2>2. 乱数表の共有機能について</h2>
+    <p>本アプリの「乱数表の共有」機能を利用した場合、次の情報を Google LLC が提供する Firebase(Firebase Realtime Database / Firebase Authentication)に送信・保存します。</p>
+    <ul>
+      <li>共有中のセッションのデータ(プレイヤー番号、アプリに入力された名前、組み合わせ、ラウンド、予定、セッション時間など)</li>
+      <li>Firebase Authentication が発行する匿名の識別子(ホストおよび閲覧中のゲスト)</li>
+      <li>閲覧中であることを示す情報(閲覧人数の表示に使用)</li>
+    </ul>
+    <p>これらの情報は、共有機能を提供する目的にのみ使用し、広告や行動の追跡には使用しません。🔰初心者マークの情報は送信しません。</p>
+    <p>共有されたデータは、共有コード(通常2桁)を知っている人が閲覧できます。共有コードは、信頼できる参加者にのみ伝えてください。</p>
+    <p>Firebase のプライバシーについて:<a class="inline" href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></p>
+
+    <h2>3. 広告について</h2>
     <p>本アプリは、Google LLC が提供するモバイル広告サービス「Google AdMob」を利用して広告を配信しています。AdMob は、広告の配信・効果測定のために、広告識別子(IDFA)などの情報を収集する場合があります。詳細は Google のプライバシーポリシーをご確認ください。</p>
     <p>Google プライバシーポリシー:<a class="inline" href="https://policies.google.com/privacy">https://policies.google.com/privacy</a><br>
     広告設定:<a class="inline" href="https://adssettings.google.com">https://adssettings.google.com</a></p>
     <p>iOS では、広告のために端末を追跡する場合、許可を求めるダイアログ(App Tracking Transparency)が表示されます。利用者は「設定 → プライバシーとセキュリティ → トラッキング」からいつでも変更できます。許可しない場合でも本アプリはご利用いただけます。</p>
 
-    <h2>3. データの第三者提供</h2>
-    <p>当方は、利用者のデータを第三者に販売・提供しません。ただし、上記のとおり広告配信のために Google AdMob が情報を収集することがあります。</p>
+    <h2>4. データの第三者提供</h2>
+    <p>当方は、利用者のデータを第三者に販売・提供しません。ただし、上記のとおり、広告配信のために Google AdMob が情報を収集すること、および共有機能を利用した場合に共有データが Google の Firebase に保存されることがあります。</p>
 
-    <h2>4. データの保管と削除</h2>
+    <h2>5. データの保管と削除</h2>
     <p>本アプリのデータは端末内に保存されます。本アプリをアンインストールすると、端末内のデータは削除されます。</p>
+    <p>共有機能で送信したデータは、ホストが共有を停止すると削除されます。停止せずにアプリを終了した場合は、最終更新から12時間後に期限切れとなり、同じコードが再利用される際に上書きされます。ゲストとして参加した場合、ゲスト側の端末には共有データを保存しません。</p>
 
-    <h2>5. 子どものプライバシー</h2>
+    <h2>6. 子どものプライバシー</h2>
     <p>本アプリは、特定の年齢層を対象として個人情報を収集するものではなく、個人を特定する情報を収集しません。</p>
 
-    <h2>6. 本ポリシーの変更</h2>
+    <h2>7. 本ポリシーの変更</h2>
     <p>当方は、必要に応じて本ポリシーを変更することがあります。変更後のポリシーは、掲載された時点から効力を生じます。</p>
 
-    <h2>7. お問い合わせ</h2>
-    <p>本ポリシーに関するお問い合わせは、X(旧Twitter)の DM までご連絡ください。<br>
+    <h2>8. お問い合わせ</h2>
+    <p>本ポリシーに関するお問い合わせは、Instagram の DM までご連絡ください。<br>
     ToggleStudio<br>
-    <a class="inline" href="https://x.com/studiotoggle">https://x.com/studiotoggle</a></p>
+    Instagram:<a class="inline" href="https://www.instagram.com/toggle._.studio/">@toggle._.studio</a></p>
     <footer>© 2026 ToggleStudio</footer>
   </section>
 
   <!-- English -->
-  <section id="en" class="policy">
+  <section id="sec-en" class="policy">
     <h1>Privacy Policy</h1>
     <p><strong>Pickler-002</strong> (the "App") is provided by ToggleStudio ("we," "us"). We respect your privacy and set out this Privacy Policy regarding how data is handled.</p>
-    <p class="muted">Last updated: June 21, 2026</p>
+    <p class="muted">Last updated: October 21, 2026</p>
 
     <h2>1. Data the App handles</h2>
-    <p>The App stores the data you enter (player names, number of players, number of courts, game counts, matchup history, etc.) only on your device. This data is never sent to our servers or any external party. The App does not collect personally identifying information such as your name, email address, phone number, or location. There is no account registration.</p>
+    <p>The App stores the data you enter (player names, number of players, number of courts, game counts, matchup history, etc.) on your device. Except when you use the "Share matchups" feature described in the next section, this data is never sent to our servers or any external party. The App does not collect personally identifying information such as your name, email address, phone number, or location. There is no account registration.</p>
 
-    <h2>2. Advertising</h2>
+    <h2>2. About the "Share matchups" feature</h2>
+    <p>When you use the "Share matchups" feature, the following information is sent to and stored in Firebase (Firebase Realtime Database / Firebase Authentication), provided by Google LLC:</p>
+    <ul>
+      <li>Data of the shared session (player numbers, names entered in the App, matchups, rounds, schedule, session time, etc.)</li>
+      <li>An anonymous identifier issued by Firebase Authentication (for the host and for guests who are viewing)</li>
+      <li>Information indicating that a guest is viewing (used to show the number of viewers)</li>
+    </ul>
+    <p>This information is used only to provide the sharing feature and is not used for advertising or tracking. 🔰 beginner mark information is not sent.</p>
+    <p>Shared data can be viewed by anyone who knows the share code (usually 2 digits). Please share the code only with trusted participants.</p>
+    <p>Firebase privacy information: <a class="inline" href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></p>
+
+    <h2>3. Advertising</h2>
     <p>The App displays ads using Google AdMob, a mobile advertising service provided by Google LLC. AdMob may collect information such as advertising identifiers (IDFA) to deliver and measure ads. For details, please see Google's privacy policy.</p>
     <p>Google Privacy Policy: <a class="inline" href="https://policies.google.com/privacy">https://policies.google.com/privacy</a><br>
     Ad settings: <a class="inline" href="https://adssettings.google.com">https://adssettings.google.com</a></p>
     <p>On iOS, a permission dialog (App Tracking Transparency) appears if the App tracks your device for advertising. You can change this anytime under Settings → Privacy &amp; Security → Tracking. You can continue using the App even if you decline.</p>
 
-    <h2>3. Sharing with third parties</h2>
-    <p>We do not sell or provide your data to third parties. However, as noted above, Google AdMob may collect information for ad delivery.</p>
+    <h2>4. Sharing with third parties</h2>
+    <p>We do not sell or provide your data to third parties. However, as noted above, Google AdMob may collect information for ad delivery, and shared data is stored in Google's Firebase when you use the sharing feature.</p>
 
-    <h2>4. Storage and deletion</h2>
+    <h2>5. Storage and deletion</h2>
     <p>The App's data is stored on your device. Uninstalling the App deletes the data stored on your device.</p>
+    <p>Data sent through the sharing feature is deleted when the host stops sharing. If the App is closed without stopping, the data expires 12 hours after the last update and is overwritten when the same code is reused. When you join as a guest, the shared data is not saved on the guest's device.</p>
 
-    <h2>5. Children's privacy</h2>
+    <h2>6. Children's privacy</h2>
     <p>The App does not target any specific age group for the collection of personal information and does not collect personally identifying information.</p>
 
-    <h2>6. Changes to this policy</h2>
+    <h2>7. Changes to this policy</h2>
     <p>We may update this policy as needed. The updated policy takes effect once posted.</p>
 
-    <h2>7. Contact</h2>
-    <p>For questions about this policy, please contact us via DM on X (formerly Twitter).<br>
+    <h2>8. Contact</h2>
+    <p>For questions about this policy, please contact us via DM on Instagram.<br>
     ToggleStudio<br>
-    <a class="inline" href="https://x.com/studiotoggle">https://x.com/studiotoggle</a></p>
+    Instagram: <a class="inline" href="https://www.instagram.com/toggle._.studio/">@toggle._.studio</a></p>
     <footer>© 2026 ToggleStudio</footer>
   </section>
 
   <!-- Tiếng Việt -->
-  <section id="vi" class="policy">
+  <section id="sec-vi" class="policy">
     <h1>Chính sách quyền riêng tư</h1>
     <p><strong>Pickler-002</strong> ("Ứng dụng") do ToggleStudio ("chúng tôi") cung cấp. Chúng tôi tôn trọng quyền riêng tư của bạn và đưa ra Chính sách quyền riêng tư này về cách xử lý dữ liệu.</p>
-    <p class="muted">Cập nhật lần cuối: 21 tháng 6, 2026</p>
+    <p class="muted">Cập nhật lần cuối: 21 tháng 10, 2026</p>
 
     <h2>1. Dữ liệu mà Ứng dụng xử lý</h2>
-    <p>Ứng dụng chỉ lưu dữ liệu bạn nhập (tên người chơi, số người, số sân, số trận, lịch sử cặp đấu, v.v.) trên thiết bị của bạn. Dữ liệu này không bao giờ được gửi đến máy chủ của chúng tôi hay bất kỳ bên nào khác. Ứng dụng không thu thập thông tin nhận dạng cá nhân như tên, email, số điện thoại hay vị trí. Không có chức năng đăng ký tài khoản.</p>
+    <p>Ứng dụng lưu dữ liệu bạn nhập (tên người chơi, số người, số sân, số trận, lịch sử cặp đấu, v.v.) trên thiết bị của bạn. Trừ khi bạn dùng tính năng "Chia sẻ bảng ghép cặp" ở mục tiếp theo, dữ liệu này không bao giờ được gửi đến máy chủ của chúng tôi hay bất kỳ bên nào khác. Ứng dụng không thu thập thông tin nhận dạng cá nhân như tên, email, số điện thoại hay vị trí. Không có chức năng đăng ký tài khoản.</p>
 
-    <h2>2. Quảng cáo</h2>
+    <h2>2. Về tính năng "Chia sẻ bảng ghép cặp"</h2>
+    <p>Khi bạn dùng tính năng "Chia sẻ bảng ghép cặp", các thông tin sau sẽ được gửi đến và lưu trữ tại Firebase (Firebase Realtime Database / Firebase Authentication) do Google LLC cung cấp:</p>
+    <ul>
+      <li>Dữ liệu của phiên đang chia sẻ (số người chơi, tên đã nhập trong Ứng dụng, cặp đấu, vòng, lịch, thời gian phiên, v.v.)</li>
+      <li>Mã nhận dạng ẩn danh do Firebase Authentication cấp (cho chủ phòng và khách đang xem)</li>
+      <li>Thông tin cho biết khách đang xem (dùng để hiển thị số người đang xem)</li>
+    </ul>
+    <p>Các thông tin này chỉ được dùng để cung cấp tính năng chia sẻ, không dùng cho quảng cáo hay theo dõi. Thông tin dấu 🔰 người mới không được gửi.</p>
+    <p>Bất kỳ ai biết mã chia sẻ (thường gồm 2 chữ số) đều có thể xem dữ liệu được chia sẻ. Vui lòng chỉ đưa mã cho người tham gia đáng tin cậy.</p>
+    <p>Thông tin quyền riêng tư của Firebase: <a class="inline" href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></p>
+
+    <h2>3. Quảng cáo</h2>
     <p>Ứng dụng hiển thị quảng cáo bằng Google AdMob, dịch vụ quảng cáo di động của Google LLC. AdMob có thể thu thập thông tin như mã nhận dạng quảng cáo (IDFA) để phân phối và đo lường quảng cáo. Vui lòng xem chính sách quyền riêng tư của Google để biết chi tiết.</p>
     <p>Chính sách của Google: <a class="inline" href="https://policies.google.com/privacy">https://policies.google.com/privacy</a><br>
     Cài đặt quảng cáo: <a class="inline" href="https://adssettings.google.com">https://adssettings.google.com</a></p>
     <p>Trên iOS, hộp thoại xin phép (App Tracking Transparency) sẽ xuất hiện nếu Ứng dụng theo dõi thiết bị cho mục đích quảng cáo. Bạn có thể thay đổi bất cứ lúc nào tại Cài đặt → Quyền riêng tư &amp; Bảo mật → Theo dõi. Bạn vẫn dùng được Ứng dụng nếu từ chối.</p>
 
-    <h2>3. Chia sẻ với bên thứ ba</h2>
-    <p>Chúng tôi không bán hay cung cấp dữ liệu của bạn cho bên thứ ba. Tuy nhiên, như đã nêu, Google AdMob có thể thu thập thông tin để phân phối quảng cáo.</p>
+    <h2>4. Chia sẻ với bên thứ ba</h2>
+    <p>Chúng tôi không bán hay cung cấp dữ liệu của bạn cho bên thứ ba. Tuy nhiên, như đã nêu, Google AdMob có thể thu thập thông tin để phân phối quảng cáo, và dữ liệu chia sẻ được lưu tại Firebase của Google khi bạn dùng tính năng chia sẻ.</p>
 
-    <h2>4. Lưu trữ và xóa</h2>
+    <h2>5. Lưu trữ và xóa</h2>
     <p>Dữ liệu của Ứng dụng được lưu trên thiết bị của bạn. Gỡ cài đặt Ứng dụng sẽ xóa dữ liệu lưu trên thiết bị.</p>
+    <p>Dữ liệu gửi qua tính năng chia sẻ sẽ bị xóa khi chủ phòng dừng chia sẻ. Nếu đóng Ứng dụng mà không dừng, dữ liệu sẽ hết hạn sau 12 giờ kể từ lần cập nhật cuối và bị ghi đè khi mã đó được dùng lại. Khi tham gia với tư cách khách, dữ liệu chia sẻ không được lưu trên thiết bị của khách.</p>
 
-    <h2>5. Quyền riêng tư của trẻ em</h2>
+    <h2>6. Quyền riêng tư của trẻ em</h2>
     <p>Ứng dụng không nhắm đến nhóm tuổi cụ thể nào để thu thập thông tin cá nhân và không thu thập thông tin nhận dạng cá nhân.</p>
 
-    <h2>6. Thay đổi chính sách</h2>
+    <h2>7. Thay đổi chính sách</h2>
     <p>Chúng tôi có thể cập nhật chính sách này khi cần. Chính sách cập nhật có hiệu lực ngay khi được đăng.</p>
 
-    <h2>7. Liên hệ</h2>
-    <p>Mọi thắc mắc về chính sách này, vui lòng liên hệ qua DM trên X (trước đây là Twitter).<br>
+    <h2>8. Liên hệ</h2>
+    <p>Mọi thắc mắc về chính sách này, vui lòng nhắn tin (DM) cho chúng tôi qua Instagram.<br>
     ToggleStudio<br>
-    <a class="inline" href="https://x.com/studiotoggle">https://x.com/studiotoggle</a></p>
+    Instagram: <a class="inline" href="https://www.instagram.com/toggle._.studio/">@toggle._.studio</a></p>
     <footer>© 2026 ToggleStudio</footer>
   </section>
 
   <!-- 한국어 -->
-  <section id="ko" class="policy">
+  <section id="sec-ko" class="policy">
     <h1>개인정보 처리방침</h1>
     <p><strong>Pickler-002</strong>("본 앱")는 ToggleStudio("당사")가 제공하는 애플리케이션입니다. 당사는 이용자의 개인정보를 존중하며, 데이터 처리에 관하여 다음과 같이 본 방침을 정합니다.</p>
-    <p class="muted">최종 업데이트: 2026년 6월 21일</p>
+    <p class="muted">최종 업데이트: 2026년 10월 21일</p>
 
     <h2>1. 본 앱이 처리하는 데이터</h2>
-    <p>본 앱은 이용자가 입력한 데이터(플레이어 이름, 인원 수, 코트 수, 참가 횟수, 대진 기록 등)를 이용자의 기기 내에만 저장합니다. 이 데이터는 당사 서버나 외부로 전송되지 않습니다. 본 앱은 이름, 이메일, 전화번호, 위치 등 개인을 식별하는 정보를 수집하지 않으며, 계정 등록 기능이 없습니다.</p>
+    <p>본 앱은 이용자가 입력한 데이터(플레이어 이름, 인원 수, 코트 수, 참가 횟수, 대진 기록 등)를 이용자의 기기 내에 저장합니다. 다음 항목의 '대진표 공유' 기능을 이용하는 경우를 제외하고, 이 데이터는 당사 서버나 외부로 전송되지 않습니다. 본 앱은 이름, 이메일, 전화번호, 위치 등 개인을 식별하는 정보를 수집하지 않으며, 계정 등록 기능이 없습니다.</p>
 
-    <h2>2. 광고</h2>
+    <h2>2. '대진표 공유' 기능에 대하여</h2>
+    <p>'대진표 공유' 기능을 이용하는 경우, 다음 정보를 Google LLC가 제공하는 Firebase(Firebase Realtime Database / Firebase Authentication)로 전송·저장합니다.</p>
+    <ul>
+      <li>공유 중인 세션의 데이터(플레이어 번호, 앱에 입력한 이름, 대진, 라운드, 일정, 세션 시간 등)</li>
+      <li>Firebase Authentication이 발급하는 익명 식별자(호스트 및 보고 있는 게스트)</li>
+      <li>보고 있음을 나타내는 정보(보고 있는 인원 표시에 사용)</li>
+    </ul>
+    <p>이 정보는 공유 기능을 제공하기 위한 목적으로만 사용하며, 광고나 행동 추적에는 사용하지 않습니다. 🔰 초보자 마크 정보는 전송하지 않습니다.</p>
+    <p>공유된 데이터는 공유 코드(보통 2자리)를 아는 사람이라면 누구나 볼 수 있습니다. 공유 코드는 신뢰할 수 있는 참가자에게만 알려 주세요.</p>
+    <p>Firebase 개인정보 관련 안내: <a class="inline" href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></p>
+
+    <h2>3. 광고</h2>
     <p>본 앱은 Google LLC의 모바일 광고 서비스 "Google AdMob"을 사용하여 광고를 게재합니다. AdMob은 광고 게재 및 측정을 위해 광고 식별자(IDFA) 등의 정보를 수집할 수 있습니다. 자세한 내용은 Google의 개인정보처리방침을 확인하세요.</p>
     <p>Google 개인정보처리방침: <a class="inline" href="https://policies.google.com/privacy">https://policies.google.com/privacy</a><br>
     광고 설정: <a class="inline" href="https://adssettings.google.com">https://adssettings.google.com</a></p>
     <p>iOS에서는 광고를 위해 기기를 추적하는 경우 허용을 요청하는 대화상자(App Tracking Transparency)가 표시됩니다. 이용자는 설정 → 개인정보 보호 및 보안 → 추적에서 언제든 변경할 수 있습니다. 거부해도 본 앱은 계속 사용할 수 있습니다.</p>
 
-    <h2>3. 제3자 제공</h2>
-    <p>당사는 이용자의 데이터를 제3자에게 판매하거나 제공하지 않습니다. 다만 위와 같이 광고 게재를 위해 Google AdMob이 정보를 수집할 수 있습니다.</p>
+    <h2>4. 제3자 제공</h2>
+    <p>당사는 이용자의 데이터를 제3자에게 판매하거나 제공하지 않습니다. 다만 위와 같이 광고 게재를 위해 Google AdMob이 정보를 수집할 수 있으며, 공유 기능을 이용하는 경우 공유 데이터가 Google의 Firebase에 저장됩니다.</p>
 
-    <h2>4. 보관 및 삭제</h2>
+    <h2>5. 보관 및 삭제</h2>
     <p>본 앱의 데이터는 기기 내에 저장됩니다. 본 앱을 삭제하면 기기 내 데이터도 삭제됩니다.</p>
+    <p>공유 기능으로 전송한 데이터는 호스트가 공유를 중지하면 삭제됩니다. 중지하지 않고 앱을 종료한 경우에는 마지막 업데이트로부터 12시간 후 만료되며, 같은 코드가 재사용될 때 덮어써집니다. 게스트로 참가한 경우 게스트 기기에는 공유 데이터를 저장하지 않습니다.</p>
 
-    <h2>5. 아동의 개인정보</h2>
+    <h2>6. 아동의 개인정보</h2>
     <p>본 앱은 특정 연령층을 대상으로 개인정보를 수집하지 않으며, 개인을 식별하는 정보를 수집하지 않습니다.</p>
 
-    <h2>6. 방침 변경</h2>
+    <h2>7. 방침 변경</h2>
     <p>당사는 필요에 따라 본 방침을 변경할 수 있습니다. 변경된 방침은 게시된 시점부터 효력이 발생합니다.</p>
 
-    <h2>7. 문의</h2>
-    <p>본 방침에 관한 문의는 X(구 Twitter) DM으로 연락해 주세요.<br>
+    <h2>8. 문의</h2>
+    <p>본 방침에 관한 문의는 Instagram DM으로 연락해 주세요.<br>
     ToggleStudio<br>
-    <a class="inline" href="https://x.com/studiotoggle">https://x.com/studiotoggle</a></p>
+    Instagram: <a class="inline" href="https://www.instagram.com/toggle._.studio/">@toggle._.studio</a></p>
     <footer>© 2026 ToggleStudio</footer>
   </section>
 
   <!-- 简体中文 -->
-  <section id="zh" class="policy">
+  <section id="sec-zh" class="policy">
     <h1>隐私政策</h1>
     <p><strong>Pickler-002</strong>（"本应用"）由 ToggleStudio（"我们"）提供。我们尊重您的隐私，并就数据处理制定本隐私政策。</p>
-    <p class="muted">最后更新：2026年6月21日</p>
+    <p class="muted">最后更新：2026年10月21日</p>
 
     <h2>1. 本应用处理的数据</h2>
-    <p>本应用仅将您输入的数据（玩家姓名、人数、球场数、场次、对阵记录等）保存在您的设备上。这些数据不会发送至我们的服务器或任何外部方。本应用不收集姓名、电子邮件、电话号码、位置等可识别个人身份的信息，且没有账户注册功能。</p>
+    <p>本应用将您输入的数据（玩家姓名、人数、球场数、场次、对阵记录等）保存在您的设备上。除使用下一项所述的“共享对阵表”功能外，这些数据不会发送至我们的服务器或任何外部方。本应用不收集姓名、电子邮件、电话号码、位置等可识别个人身份的信息，且没有账户注册功能。</p>
 
-    <h2>2. 广告</h2>
+    <h2>2. 关于“共享对阵表”功能</h2>
+    <p>使用“共享对阵表”功能时，以下信息将发送并保存至 Google LLC 提供的 Firebase（Firebase Realtime Database / Firebase Authentication）：</p>
+    <ul>
+      <li>共享中的场次数据（玩家号码、在本应用中输入的姓名、对阵、轮次、赛程、场次时间等）</li>
+      <li>Firebase Authentication 发放的匿名标识符（主持人及正在查看的访客）</li>
+      <li>表示正在查看的信息（用于显示查看人数）</li>
+    </ul>
+    <p>这些信息仅用于提供共享功能，不用于广告或行为追踪。🔰新手标记的信息不会被发送。</p>
+    <p>知道共享码（通常为2位）的人都可以查看共享的数据。请只将共享码告诉可信任的参加者。</p>
+    <p>Firebase 隐私信息：<a class="inline" href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></p>
+
+    <h2>3. 广告</h2>
     <p>本应用使用 Google LLC 提供的移动广告服务 "Google AdMob" 来展示广告。AdMob 可能会收集广告标识符（IDFA）等信息以投放和衡量广告。详情请查看 Google 的隐私政策。</p>
     <p>Google 隐私政策：<a class="inline" href="https://policies.google.com/privacy">https://policies.google.com/privacy</a><br>
     广告设置：<a class="inline" href="https://adssettings.google.com">https://adssettings.google.com</a></p>
     <p>在 iOS 上，若本应用为广告目的追踪您的设备，会显示请求许可的对话框（App Tracking Transparency）。您可随时在"设置 → 隐私与安全性 → 跟踪"中更改。即使拒绝，您仍可继续使用本应用。</p>
 
-    <h2>3. 向第三方提供</h2>
-    <p>我们不会向第三方出售或提供您的数据。但如上所述，Google AdMob 可能会为投放广告而收集信息。</p>
+    <h2>4. 向第三方提供</h2>
+    <p>我们不会向第三方出售或提供您的数据。但如上所述，Google AdMob 可能会为投放广告而收集信息；使用共享功能时，共享数据会保存在 Google 的 Firebase 中。</p>
 
-    <h2>4. 存储与删除</h2>
+    <h2>5. 存储与删除</h2>
     <p>本应用的数据保存在您的设备上。卸载本应用即会删除设备上保存的数据。</p>
+    <p>通过共享功能发送的数据，会在主持人停止共享时删除。若未停止共享就关闭应用，数据将在最后一次更新的12小时后过期，并在同一共享码被再次使用时被覆盖。以访客身份加入时，访客设备上不会保存共享数据。</p>
 
-    <h2>5. 儿童隐私</h2>
+    <h2>6. 儿童隐私</h2>
     <p>本应用不针对特定年龄段收集个人信息，也不收集可识别个人身份的信息。</p>
 
-    <h2>6. 政策变更</h2>
+    <h2>7. 政策变更</h2>
     <p>我们可能会根据需要更新本政策。更新后的政策自发布之时起生效。</p>
 
-    <h2>7. 联系方式</h2>
-    <p>有关本政策的问题，请通过 X（原 Twitter）私信与我们联系。<br>
+    <h2>8. 联系方式</h2>
+    <p>有关本政策的问题，请通过 Instagram 私信与我们联系。<br>
     ToggleStudio<br>
-    <a class="inline" href="https://x.com/studiotoggle">https://x.com/studiotoggle</a></p>
+    Instagram：<a class="inline" href="https://www.instagram.com/toggle._.studio/">@toggle._.studio</a></p>
     <footer>© 2026 ToggleStudio</footer>
   </section>
 
@@ -216,16 +285,32 @@
 <script>
   (function () {
     var langs = ["ja", "en", "vi", "ko", "zh"];
+    // --- プライバシーポリシー / サポート の切り替え(表示中の言語を引き継ぐ) ---
+    var pageLabels = {
+      ja: ["プライバシーポリシー", "サポート"],
+      en: ["Privacy Policy", "Support"],
+      vi: ["Chính sách quyền riêng tư", "Hỗ trợ"],
+      ko: ["개인정보 처리방침", "지원"],
+      zh: ["隐私政策", "支持"]
+    };
+    function updatePages(lang) {
+      var labels = pageLabels[lang] || pageLabels.ja;
+      var priv = document.querySelector('nav.pages a[data-page="privacy"]');
+      var sup = document.querySelector('nav.pages a[data-page="support"]');
+      if (priv) { priv.textContent = labels[0]; priv.href = "index.html#" + lang; }
+      if (sup) { sup.textContent = labels[1]; sup.href = "support.html#" + lang; }
+    }
     function show(lang) {
       if (langs.indexOf(lang) === -1) lang = "ja";
       langs.forEach(function (l) {
-        var sec = document.getElementById(l);
+        var sec = document.getElementById("sec-" + l);   // id を言語コードと分けて、#ja などで自動スクロールしないように
         if (sec) sec.classList.toggle("active", l === lang);
       });
       document.querySelectorAll("nav.langs a").forEach(function (a) {
         a.classList.toggle("current", a.getAttribute("href") === "#" + lang);
       });
       document.documentElement.lang = lang === "zh" ? "zh-Hans" : lang;
+      updatePages(lang);
     }
     function fromHash() { show((location.hash || "#ja").replace("#", "")); }
     window.addEventListener("hashchange", fromHash);
